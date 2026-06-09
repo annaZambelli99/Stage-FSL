@@ -1,0 +1,914 @@
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+@media (max-width: 767px) {
+
+    .testo-sinistra {
+        color: #292625 !important;
+        font-size: 80px;
+        display: inline-block;
+        letter-spacing: 0px;
+    }
+
+    .span {
+        font-style: italic !important;
+    }
+
+    .scritta-uno {
+        font-size: 64px !important;
+        font-weight: 400 !important;
+        font-family: 'benton-modern-display-conden', serif;
+    }
+
+    .scritta-due {
+        font-style: italic !important;
+        font-size: 64px !important;
+        font-weight: 400 !important;
+        font-family: 'benton-modern-display-conden', serif;
+    }
+
+    .sotto-title {
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: #2c2c2c;
+        font-size: 30px;
+        margin-top: 30px;
+        line-height: 1.5;
+        font-family: 'benton-modern-display-conden', serif;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .sotto-title-footer {
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: #2c2c2c;
+        font-size: 30px;
+        margin-top: 30px;
+        line-height: 1.5;
+        font-family: 'benton-modern-display-conden', serif;
+        padding-right: 20px;
+    }
+
+    .sotto-title-light {
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: #ffffff;
+        font-size: 30px;
+        margin-top: 30px;
+        line-height: 1.5;
+        font-family: 'benton-modern-display-conden', serif;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .sotto-title-sx {
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: #2c2c2c;
+        font-size: 30px;
+        text-align: start;
+        line-height: 1.0;
+        font-family: 'benton-modern-display-conden', serif;
+
+        padding-left: 4px;
+        margin-left: 0;
+    }
+
+    .sotto-title-40 {
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: #2c2c2c;
+        font-size: 35px;
+        margin-top: 30px;
+        line-height: 1.5;
+        font-family: 'benton-modern-display-conden', serif;
+        padding-left: 18px;
+        padding-right: 20px;
+    }
+
+    .row {
+        margin-left: 0% !important;
+        margin-RIGHT: 0% !important;
+    }
+
+    .sotto-title-45 {
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: #2c2c2c;
+        font-size: 40px;
+        margin-top: 30px;
+        line-height: 1.5;
+        font-family: 'benton-modern-display-conden', serif;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .sotto-title-35 {
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: #2c2c2c;
+        font-size: 30px;
+        margin-top: 30px;
+        line-height: 1.5;
+        font-family: 'benton-modern-display-conden', serif;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hr-desktop {
+        display: none;
+    }
+
+    .sotto-title-45-light {
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: #ffffff;
+        font-size: 40px;
+        margin-top: 30px;
+        line-height: 1.5;
+        font-family: 'benton-modern-display-conden', serif;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .sotto-title-45-pk {
+        font-size: 40px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-family: 'benton-modern-display-conden', serif;
+    }
+
+    .sotto-title-h {
+        font-weight: 100;
+        letter-spacing: 0.5px;
+        color: #2c2c2c;
+        font-size: 23px;
+        margin-top: 30px;
+        line-height: 1.5;
+        font-family: 'halyard-text-extralight', sans-serif;
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: center;
+    }
+
+
+    .sotto-title-h-light {
+        font-weight: 100;
+        letter-spacing: 0.5px;
+        color: #ffffff;
+        font-size: 15px;
+        margin-top: 15px;
+        line-height: 1.5;
+        font-family: 'halyard-text-extralight', sans-serif;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .paragrafo-h {
+        font-weight: 100;
+        letter-spacing: 0.5px;
+        color: #2c2c2c;
+        font-size: 20px;
+        margin-top: 30px;
+        line-height: 1.5;
+        font-family: 'halyard-text-extralight', sans-serif;
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+    .paragrafo-h-t {
+        font-weight: 100;
+        letter-spacing: 0.5px;
+        color: #2c2c2c;
+        font-size: 20px;
+        margin-top: 30px;
+        line-height: 1.5;
+        font-family: 'halyard-text-extralight', sans-serif;
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+    .font-lista {
+        font-weight: 100;
+        letter-spacing: 0.5px;
+        color: #2c2c2c;
+        font-size: 20px;
+        line-height: 1.5;
+        font-family: 'halyard-text-extralight', sans-serif;
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+    .sotto-title-conosciamoci {
+        font-size: 28px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-family: 'benton-modern-display-conden', serif;
+    }
+
+
+    .distanza {
+        padding-top: 40px;
+    }
+
+    /*----------Animazione scorrevole*/
+
+    .stage_animation {
+        overflow: hidden;
+        white-space: nowrap;
+        display: inline-block;
+    }
+
+    .stage_animation p {
+        display: inline-block;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: #2c2c2c;
+        font-size: 25px;
+        margin-top: 44px;
+        font-family: 'benton-modern-display-conden', serif;
+    }
+
+    @keyframes stage_animation {
+        0% {
+            transform: translate3d(0, 0, 0);
+        }
+
+        100% {
+            transform: translate3d(-50%, 0, 0);
+        }
+    }
+
+    .immagine-dx {
+        width: 100%;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .immagine-dx-m {
+        width: 100%;
+
+        margin-bottom: 20px;
+    }
+
+    .stage_animation {
+        animation: stage_animation 5s linear infinite;
+    }
+
+    .magazine {
+        font-size: 16px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center !important;
+    }
+
+
+    .sotto-title-y {
+        font-size: 20px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-family: 'benton-modern-display-conden', serif;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------Tablet*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+    /* Titoli principali */
+    .scritta-uno {
+        font-size: 52px !important;
+        font-weight: 400 !important;
+        font-family: 'benton-modern-display-conden', serif;
+    }
+
+    .scritta-due {
+        font-style: italic !important;
+        font-size: 52px !important;
+        font-weight: 400 !important;
+        font-family: 'benton-modern-display-conden', serif;
+    }
+
+    .paragrafo-h-t {
+        font-weight: 100;
+        letter-spacing: 0.5px;
+        color: #2c2c2c;
+        font-size: 15px;
+        margin-top: 30px;
+        line-height: 1.5;
+        font-family: 'halyard-text-extralight', sans-serif;
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+    .sotto-title-y {
+        font-size: 24px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    
+    .italic {
+        font-style: italic !important;
+    }
+
+    /* Testi serif grandi */
+    .sotto-title {
+        font-size: 24px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .sotto-title-footer {
+        font-size: 24px;
+        margin-top: 20px;
+        padding-right: 15px;
+    }
+
+    .sotto-title-light {
+        font-size: 27px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: #ffffff;
+        line-height: 1.5;
+        font-family: 'benton-modern-display-conden', serif;
+    }
+
+    .sotto-title-sx {
+        font-size: 24px;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .sotto-title-40 {
+        font-size: 29px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-family: 'benton-modern-display-conden', serif;
+    }
+
+    .sotto-title-conosciamoci {
+        font-size: 28px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+        font-family: 'benton-modern-display-conden', serif;
+
+    }
+
+    .sotto-title-45 {
+        font-size: 32px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+                font-family: 'benton-modern-display-conden', serif;
+
+
+    }
+
+    .sotto-title-35 {
+        font-size: 24px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .immagine-dx-m {
+        width: 100%;
+
+        margin-bottom: 20px;
+    }
+
+    .sotto-title-45-light {
+        font-size: 35px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: #ffffff;
+        line-height: 1.5;
+        font-family: 'benton-modern-display-conden', serif;
+    }
+
+    /* Testi sans-serif leggeri */
+    .sotto-title-h {
+        text-align: center;
+        font-size: 25px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .sotto-title-h-light {
+        font-size: 13px;
+        margin-top: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-weight: 100;
+        letter-spacing: 0.5px;
+        color: #ffffff;
+        line-height: 1.5;
+        font-family: 'halyard-text-extralight', sans-serif;
+    }
+
+    .paragrafo-h {
+        font-size: 16px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .magazine {
+        font-size: 16px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center !important;
+    }
+
+    .font-lista {
+        font-size: 16px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+
+    /* Row */
+    .row {
+        margin-left: 0% !important;
+        margin-right: 0% !important;
+    }
+
+    /* Immagine destra */
+    .immagine-dx {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .distanza {
+        padding-top: 20px;
+    }
+
+     .img-t {
+
+        padding: 50px;
+    }
+
+
+    /*----------Animazione scorrevole*/
+
+    .stage_animation {
+        overflow: hidden;
+        white-space: nowrap;
+        display: inline-block;
+    }
+
+    .stage_animation p {
+        display: inline-block;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: #2c2c2c;
+        font-size: 20px;
+        margin-top: 30px;
+        font-family: 'benton-modern-display-conden', serif;
+    }
+
+    @keyframes stage_animation {
+        0% {
+            transform: translate3d(0, 0, 0);
+        }
+
+        100% {
+            transform: translate3d(-50%, 0, 0);
+        }
+    }
+
+    .stage_animation {
+        animation: stage_animation 5s linear infinite;
+    }
+
+
+    /*immagine + testo affiancati centrati */
+    .container-fluid .row.g-0 {
+        justify-content: center;
+    }
+
+    .sotto-title-45-pk {
+        font-size: 50px;
+        margin-top: 20px;
+        padding-left: 50px;
+        padding-right: 15px;
+        font-family: 'benton-modern-display-conden', serif;
+
+    }
+
+    .col-md-5 {
+        width: 45% !important;
+    }
+
+
+    .sotto-title-y {
+        font-size: 30px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-family: 'benton-modern-display-conden', serif;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------pc*/
+
+@media (min-width: 992px) {
+
+    .testo-overlay-centro {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        max-width: 700px;
+        margin: 15px auto;
+        z-index: 1;
+        font-weight: 400;
+    }
+
+    .testo-sinistra {
+        color: #292625 !important;
+        font-size: 150px;
+        display: inline-block;
+        letter-spacing: 0px;
+    }
+
+    /* Titoli principali */
+    .scritta-uno {
+        font-size: 110px !important;
+        font-weight: 400 !important;
+        font-family: 'benton-modern-display-conden', serif;
+    }
+
+    .scritta-due {
+        font-style: italic !important;
+        font-size: 110px !important;
+        font-weight: 400 !important;
+        font-family: 'benton-modern-display-conden', serif;
+    }
+
+
+
+    .sotto-title-y {
+        font-size: 30px;
+        margin-top: 200px;
+        padding-left: 180px;
+        padding-right: 180px;
+        font-family: 'benton-modern-display-conden', serif;
+    }
+
+    .img-bianca {
+        max-width: 100%;
+    }
+
+    .italic {
+        font-style: italic !important;
+    }
+
+
+    /* Testi serif grandi */
+    .sotto-title {
+        font-size: 24px;
+        text-align: center;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-family: 'benton-modern-display-conden', serif;
+    }
+
+    .sotto-title-footer {
+        font-size: 24px;
+        margin-top: 20px;
+        padding-right: 15px;
+    }
+
+    .sotto-title-light {
+        font-size: 28px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: #ffffff;
+        line-height: 1.5;
+        font-family: 'benton-modern-display-conden', serif;
+    }
+
+    .sotto-title-sx {
+        font-size: 40px;
+        margin-left: 0;
+        font-family: 'benton-modern-display-conden', serif;
+    }
+
+    .sotto-title-40 {
+        font-size: 35px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-family: 'benton-modern-display-conden', serif;
+    }
+
+    .sotto-title-conosciamoci {
+        font-size: 28px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+        font-family: 'benton-modern-display-conden', serif;
+
+    }
+
+    .img-t {
+
+        padding: 50px;
+    }
+
+    .padding-dist {
+        padding-bottom: 0px;
+    }
+
+    .sotto-title-45 {
+        font-size: 32px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-family: 'benton-modern-display-conden', serif;
+
+    }
+
+    .sotto-title-45-pk {
+        font-size: 70px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-family: 'benton-modern-display-conden', serif;
+
+    }
+
+    .padding-pk {
+        padding-left: 40px;
+    }
+
+    .sotto-title-35 {
+        font-size: 35px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-family: 'benton-modern-display-conden', serif;
+
+    }
+
+    .sotto-title-45-light {
+        font-size: 35px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: #ffffff;
+        line-height: 1.5;
+        font-family: 'benton-modern-display-conden', serif;
+    }
+
+    .immagine-dx-m {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Testi sans-serif leggeri */
+    .sotto-title-h {
+        font-size: 18px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .sotto-title-h-light {
+        font-size: 13px;
+        margin-top: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-weight: 100;
+        letter-spacing: 0.5px;
+        color: #ffffff;
+        line-height: 1.5;
+        font-family: 'halyard-text-extralight', sans-serif;
+    }
+
+    .paragrafo-h {
+        font-size: 16px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .paragrafo-h-t {
+        font-size: 16px;
+        margin-top: 20px;
+        padding-left: 70px;
+        padding-right: 15px;
+    }
+
+    .magazine {
+        font-size: 16px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center !important;
+    }
+
+    .font-lista {
+        font-size: 16px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Row */
+    .row {
+        margin-left: 0% !important;
+        margin-right: 0% !important;
+    }
+
+    .padding-t {
+        padding-bottom: 200px;
+
+    }
+
+    /* Immagine destra */
+    .immagine-dx {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .distanza {
+        padding-top: 20px;
+    }
+
+    /*----------Animazione scorrevole*/
+
+    .stage_animation {
+        overflow: hidden;
+        white-space: nowrap;
+        display: inline-block;
+    }
+
+    .stage_animation p {
+        display: inline-block;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: #2c2c2c;
+        font-size: 20px;
+        margin-top: 30px;
+        font-family: 'benton-modern-display-conden', serif;
+    }
+
+    @keyframes stage_animation {
+        0% {
+            transform: translate3d(0, 0, 0);
+        }
+
+        100% {
+            transform: translate3d(-50%, 0, 0);
+        }
+    }
+
+    .stage_animation {
+        animation: stage_animation 5s linear infinite;
+    }
+
+
+    /*immagine + testo affiancati centrati */
+    .container-fluid .row.g-0 {
+        justify-content: center;
+    }
+
+    .grandezza{
+        width: auto;
+    }
+
+    .col-md-5 {
+        width: 45% !important;
+    }
+
+    .container-y-img {
+        background-color: #DCB215;
+        background-image: url(image/Tracciato5-bianco.png);
+        background-size: cover;
+        background-position: center top;
+    }
+
+    .padding {
+        padding-top: 200px;
+        padding-bottom: 150px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container-y {
+    background-color: #DCB215;
+}
+
+.container-w {
+    background-color: #FFFFFF;
+}
+
+.container-d {
+    background-color: #373232;
+}
+
+.paragrafo {
+    font-family: 'halyard-text-book', sans-serif;
+    font-size: 13px;
+    width: 90% !important;
+}
+
+
+.text-secondary {
+    color: #2c2c2c !important;
+}
+
+.hr {
+    border-top-color: #2c2c2c !important;
+}
+
+
+
+.container-y-ombra {
+    background-color: #DCB215;
+    background: linear-gradient(to bottom, #5a480e 0%, #a27f15 10%, #DCB215 20%);
+}
+
+
+.gradient-sfondo {
+    background: linear-gradient(#bb9611 10%,
+            #c7a014 20%,
+            #d0a711 10%,
+            /*è come se questa non la rilevasse*/
+            #d9b111 10%,
+            #DCB215 50%)
+}
