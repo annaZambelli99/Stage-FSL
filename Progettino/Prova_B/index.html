@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Cerca ricette</title>
+</head>
+<body>
+    <!-- bg-light per uno sfondo grigio chiaro su tutte le pagine-->
+    <nav class="bg-light">
+        <div class="container py-5">
+            <h1 class="text-center mb-2"> Cerca le ricette</h1>
+            <p class="text-center text-muted mb-4">Inserisci un ingrediente per trovare le ricette</p>
+
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-6">
+                    <!-- input-group= bottone dell'input-->
+                    <div class="input-group">
+                        <select class="form-select"  id="selectCategoria" style="max-width: 130px;">
+                              <option selected id="selectCaricamento">Sta caricanado...</option>
+                        </select>
+
+                     <!-- placeholder = è la scrittina grigia che appare quando il campo è vuoto-->
+                     <input type="text" id="inputIngrediente" class="form-control" placeholder="Es. tomato, chicken">
+                    <button class="btn btn-danger" id="btnCerca">Cerca</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive" id="risultati">
+                <table class="table table-striped table-hover align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Nome ricetta</th>
+                            <th>Categoria</th>
+                            <th>Area</th>
+                            <th>Stato</th>
+                            <th>Immagine</th>
+                            <th>YouTube</th>
+                            <th>Recipe</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="tabellaBody">
+                        <tr>
+                            <!-- colspan =una cella così si allarga su tutte e 7 le colonne-->
+                            <td colspan="7" class="text-center text muted">Nessuna ricerca effettuata</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
