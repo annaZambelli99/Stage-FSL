@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://use.typekit.net/xwx2dmc.css">
-
 </head>
 
 <body>
@@ -19,13 +18,12 @@
     <div class="container">
 
       <h1 class="main-title">Prenota il tuo transfer</h1>
-      <h3 class="sub-title mb-5 mt-4">Da Venezia Piazzale Roma a Treviso Aeroporto “A. Canova” TSF</h3>
+      <h3 class="sub-title mb-5 mt-4">Da Venezia Piazzale Roma a Treviso Aeroporto "A. Canova" TSF</h3>
 
       <div class="card-transfer row g-0">
 
         <div class="col-12 col-md-5 position-relative img-container">
           <img src="img/Rettangolo 2198.jpg" class="img-fluid transfer-img" alt="piazza" />
-
           <div class="rect-tragitto">
             <i class="bi bi-clock badge-duration"></i> Tragitto: 15 minuti
           </div>
@@ -43,21 +41,14 @@
           <hr class="pezzo-vuoto">
 
           <div class="row elenco-distanza">
-
             <div class="col-12 col-sm-6 servizi">
               <i class="bi bi-check-circle-fill servizi_icone"></i>
-              <div>
-                <strong>Prezzo fisso garantito</strong>
-              </div>
+              <div><strong>Prezzo fisso garantito</strong></div>
             </div>
-
             <div class="col-12 col-sm-6 servizi">
               <i class="bi bi-check-circle-fill servizi_icone"></i>
-              <div>
-                <strong>Servizio Meet&Greet</strong>
-              </div>
+              <div><strong>Servizio Meet&Greet</strong></div>
             </div>
-
             <div class="col-12 col-sm-6 servizi">
               <i class="bi bi-check-circle-fill servizi_icone"></i>
               <div>
@@ -66,14 +57,10 @@
                 <span class="sub-feature">15" altre destinazioni</span>
               </div>
             </div>
-
             <div class="col-12 col-sm-6 servizi">
               <i class="bi bi-check-circle-fill servizi_icone"></i>
-              <div>
-                <strong>Assistenza bagagli</strong>
-              </div>
+              <div><strong>Assistenza bagagli</strong></div>
             </div>
-
           </div>
         </div>
       </div>
@@ -81,21 +68,9 @@
   </section>
 
 
-
-
-
-
-
-
-
-
-
-
   <!-- FORM CONFIGURA IL TUO VIAGGIO -->
   <section class="py-5 container-transfer">
     <div class="container">
-
-
 
       <div class="form-header row align-items-center mb-5">
         <div class="col-8">
@@ -105,13 +80,10 @@
           <div class="rct-andata-ritorno">
             <div class="form-check">
               <input class="form-check-input" type="checkbox" value="" id="mioCheckbox">
-              <label class="form-check-label" for="mioCheckbox">
-                Andata e ritorno
-              </label>
+              <label class="form-check-label" for="mioCheckbox">Andata e ritorno</label>
             </div>
           </div>
           <i class="bi bi-question-circle-fill rct-help-ar ms-1"></i>
-
         </div>
       </div>
 
@@ -128,34 +100,44 @@
           <!-- Partenza / Destinazione -->
           <div class="row mb-3">
             <div class="col-12 col-md-6">
-              <div class="form-label-small">PARTENZA <span class="form-value-text">Venezia Piazzale Roma</span></div>
-
+              <div class="form-label-small">PARTENZA</div>
+              <div class="custom-select-wrap">
+                <select class="form-select-custom" id="select-partenza" onchange="aggiornaDestinazione()">
+                  <option value="">Seleziona partenza</option>
+                </select>
+                <i class="bi bi-chevron-down select-icon"></i>
+              </div>
               <button class="btn-ritrovo"><i class="bi bi-geo-alt me-1"></i>VEDI IL PUNTO DI RITROVO</button>
             </div>
             <div class="col-12 col-md-6 mt-3 mt-md-0">
-              <div class="form-label-small">DESTINAZIONE <span class="form-value-text">Treviso Aeroporto "A.
-                  Ca...</span>
+              <div class="form-label-small">DESTINAZIONE</div>
+              <div class="custom-select-wrap">
+                <select class="form-select-custom" id="select-destinazione">
+                  <option value="">Seleziona prima la partenza</option>
+                </select>
+                <i class="bi bi-chevron-down select-icon"></i>
               </div>
-
             </div>
           </div>
-
-          <hr class="form-divider">
 
           <!-- Data + Orario -->
           <div class="row g-3 mb-3">
             <div class="col-12 col-md-6">
-              <label class="form-label-input">DATA*</label>
-              <div class="input-icon-wrap">
-                <input type="text" class="form-input" placeholder="Seleziona una data">
+              <div class="input-group mb-3">
+                <input type="date" id="datepicker" class="form-control form-input" placeholder="Seleziona data">
+
               </div>
             </div>
-            <div class="col-12 col-md-6">
-              <label class="form-label-input">ORARIO DI ARRIVO DEL VOLO*</label>
-              <div class="d-flex gap-2">
-                <input type="text" class="form-input w-50" placeholder="Ora">
-                <input type="text" class="form-input w-50" placeholder="Minuti">
-              </div>
+          </div>
+
+          <div class="col-12 col-md-6 mb-3">
+            <label class="form-label-input">ORARIO DI ARRIVO DEL VOLO*</label>
+            <div class="d-flex gap-2">
+              <input type="text" id="input-ora" class="form-input w-50" placeholder="Ora (es. 14)" maxlength="2" oninput="validaOrario()">
+              <input type="text" id="input-minuti" class="form-input w-50" placeholder="Minuti (es. 30)" maxlength="2" oninput="validaOrario()">
+            </div>
+            <div id="orario-error" class="error-msg" style="display:none;">
+              <i class="bi bi-exclamation-circle me-1"></i>I minuti devono essere multipli di 5 (00, 05, 10, 15... 55)
             </div>
           </div>
 
@@ -166,242 +148,228 @@
                 NUMERO VOLO
                 <span class="label-help ms-1"><i class="bi bi-question-circle-fill"></i></span>
               </label>
-              <input type="text" class="form-input" placeholder="Inserisci il numero del tuo volo">
+              <input type="text" id="input-volo" class="form-input" placeholder="Es. AZ1929" maxlength="6" oninput="validaVolo(this)">
+              <div id="volo-error" class="error-msg" style="display:none;">
+                <i class="bi bi-exclamation-circle me-1"></i>Formato non valido. Usa: 2 lettere IATA + 1-4 cifre (es. AZ1929)
+              </div>
             </div>
           </div>
 
-          <hr class="form-divider">
-
           <!-- Veicolo -->
-          <div class="mb-1">
+          <div class="mb-1 mt-4">
             <label class="form-label-input">IL TUO VEICOLO</label>
-            <div class="row  mt-2">
-
+            <div class="row mt-2">
               <div class="col-4 col-sm-4">
-                <button class="btn-veicolo btn-veicolo-active w-100">
+                <button class="btn-veicolo btn-veicolo-active w-100" onclick="selezionaVeicolo(this, 'Premium')">
                   Premium
                   <span class="veicolo-help ms-1"><i class="bi bi-question-circle-fill help-me"></i></span>
                 </button>
               </div>
-
-              <div class="col-4 col-sm-">
-                <button class="btn-veicolo w-100">
+              <div class="col-4 col-sm-4">
+                <button class="btn-veicolo w-100" onclick="selezionaVeicolo(this, 'Luxury')">
                   Luxury
                   <span class="veicolo-help ms-1"><i class="bi bi-question-circle-fill help-me"></i></span>
                 </button>
               </div>
             </div>
-
-            <hr class="form-divider">
-
-            <!-- Passeggeri / Valigie / Bagagli -->
-            <div class="row g-2 mb-3">
-              <div class="col-2">
-                <label class="form-label-input">
-                  PASSEGGERI*
-                  <span class="label-help ms-1"><i class="bi bi-question-circle-fill"></i></span>
-                </label>
-                <div class="custom-select-wrap">
-                  <select class="form-select-custom">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                  </select>
-                  <i class="bi bi-chevron-down select-icon"></i>
-                </div>
-              </div>
-              <div class="col-1"></div>
-              <div class="col-2 col-sm-2">
-                <label class="form-label-input">VALIGIE*</label>
-                <div class="custom-select-wrap">
-                  <select class="form-select-custom">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                  </select>
-                  <i class="bi bi-chevron-down select-icon"></i>
-                </div>
-              </div>
-
-              <div class="col-1"></div>
-              <div class="col-2 col-sm-2">
-                <label class="form-label-input">BAGAGLI A MANO*</label>
-                <div class="custom-select-wrap">
-                  <select class="form-select-custom">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                  </select>
-                  <i class="bi bi-chevron-down select-icon"></i>
-                </div>
-              </div>
-            </div>
-
-            <hr class="form-divider">
-
-
-
-
-
-            <!-- Servizi optional -->
-            <div class="mb-2">
-              <label class="form-label-input">SERVIZI OPTIONAL</label>
-            </div>
-
-            <div class="row g-3">
-
-              <!-- Colonna sinistra -->
-              <div class="col-12 col-md-6">
-
-                <div class="optional-row">
-                  <div class="optional-info">
-                    <span class="optional-name">Seggiolino per bambini</span>
-                    <span class="optional-price gratis">Gratis</span>
-                  </div>
-                  <div class="d-flex align-items-center gap-1">
-                    <i class="bi bi-question-circle-fill label-help"></i>
-
-                    <div class="custom-select-wrap optional-select">
-                      <select class="form-select-custom">
-                        <option>0</option>
-                        <option>1</option>
-                        <option>2</option>
-                      </select>
-                      <i class="bi bi-chevron-down select-icon"></i>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="optional-row">
-                  <div class="optional-info">
-                    <span class="optional-name">Alzatina per bambini</span>
-                    <span class="optional-price gratis">Gratis</span>
-                  </div>
-                  <div class="d-flex align-items-center gap-1">
-                    <i class="bi bi-question-circle-fill label-help"></i>
-                    <div class="custom-select-wrap optional-select">
-                      <select class="form-select-custom">
-                        <option>0</option>
-                        <option>1</option>
-                        <option>2</option>
-                      </select>
-                      <i class="bi bi-chevron-down select-icon"></i>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="optional-row">
-                  <div class="optional-info">
-                    <span class="optional-name">Passeggino</span>
-                    <span class="optional-price gratis">Gratis</span>
-                  </div>
-                  <div class="custom-select-wrap optional-select">
-                    <select class="form-select-custom">
-                      <option>0</option>
-                      <option>1</option>
-                      <option>2</option>
-                    </select>
-                    <i class="bi bi-chevron-down select-icon"></i>
-                  </div>
-                </div>
-
-                <div class="optional-row">
-                  <div class="optional-info">
-                    <span class="optional-name">Carrozzina pieghevole</span>
-                    <span class="optional-price gratis">Gratis</span>
-                  </div>
-                  <div class="custom-select-wrap optional-select">
-                    <select class="form-select-custom">
-                      <option>0</option>
-                      <option>1</option>
-                      <option>2</option>
-                    </select>
-                    <i class="bi bi-chevron-down select-icon"></i>
-                  </div>
-                </div>
-
-              </div>
-
-              <!-- Colonna destra -->
-              <div class="col-12 col-md-6">
-
-                <div class="optional-row">
-                  <div class="optional-info">
-                    <span class="optional-name">Sci o snowboard</span>
-                    <span class="optional-price">+10€</span>
-                  </div>
-                  <div class="custom-select-wrap optional-select">
-                    <select class="form-select-custom">
-                      <option>0</option>
-                      <option>1</option>
-                      <option>2</option>
-                    </select>
-                    <i class="bi bi-chevron-down select-icon"></i>
-                  </div>
-                </div>
-
-                <div class="optional-row">
-                  <div class="optional-info">
-                    <span class="optional-name">Strumenti musicali</span>
-                    <span class="optional-price">+10€</span>
-                  </div>
-                  <div class="custom-select-wrap optional-select">
-                    <select class="form-select-custom">
-                      <option>0</option>
-                      <option>1</option>
-                      <option>2</option>
-                    </select>
-                    <i class="bi bi-chevron-down select-icon"></i>
-                  </div>
-                </div>
-
-                <div class="optional-row">
-                  <div class="optional-info">
-                    <span class="optional-name">Attrezzatura da golf</span>
-                    <span class="optional-price">+10€</span>
-                  </div>
-                  <div class="custom-select-wrap optional-select">
-                    <select class="form-select-custom">
-                      <option>0</option>
-                      <option>1</option>
-                      <option>2</option>
-                    </select>
-                    <i class="bi bi-chevron-down select-icon"></i>
-                  </div>
-                </div>
-
-                <div class="optional-row">
-                  <div class="optional-info">
-                    <span class="optional-name">Animali domestici </span>
-                    <span class="optional-price">+10€</span>
-                  </div>
-                  <div class="d-flex align-items-center gap-1">
-                    <i class="bi bi-question-circle-fill label-help"></i>
-                    <div class="custom-select-wrap optional-select">
-                      <select class="form-select-custom">
-                        <option>0</option>
-                        <option>1</option>
-                        <option>2</option>
-                      </select>
-                      <i class="bi bi-chevron-down select-icon"></i>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-            <!-- fine optional -->
-
           </div>
-          <!-- fine form-body -->
+
+          <!-- Passeggeri / Valigie / Bagagli -->
+          <div class="row g-2 mb-3 mt-4">
+            <div class="col-2">
+              <label class="form-label-input">
+                PASSEGGERI*
+                <span class="label-help ms-1"><i class="bi bi-question-circle-fill"></i></span>
+              </label>
+              <div class="custom-select-wrap">
+                <select class="form-select-custom" id="select-passeggeri">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                </select>
+                <i class="bi bi-chevron-down select-icon"></i>
+              </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-2 col-sm-2">
+              <label class="form-label-input">VALIGIE*</label>
+              <div class="custom-select-wrap">
+                <select class="form-select-custom" id="select-valigie">
+                  <option>0</option>
+                  <option>1</option>
+                </select>
+                <i class="bi bi-chevron-down select-icon"></i>
+              </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-2 col-sm-2">
+              <label class="form-label-input">BAGAGLI A MANO*</label>
+              <div class="custom-select-wrap">
+                <select class="form-select-custom" id="select-bagagli">
+                  <option>0</option>
+                  <option>1</option>
+                </select>
+                <i class="bi bi-chevron-down select-icon"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Avviso Luxury -->
+          <div id="avviso-luxury" class="avviso-luxury" style="display:none;">
+            <i class="bi bi-info-circle-fill me-2"></i>
+            Hai selezionato più di 5 passeggeri: il veicolo è stato cambiato automaticamente in <strong>Luxury</strong>.
+          </div>
+
+          <hr class="form-divider">
+
+          <!-- Servizi optional -->
+          <div class="mb-2">
+            <label class="form-label-input">SERVIZI OPTIONAL</label>
+          </div>
+
+          <div class="row g-3">
+            <!-- Colonna sinistra -->
+            <div class="col-12 col-md-6">
+              <div class="optional-row">
+                <div class="optional-info">
+                  <span class="optional-name">Seggiolino per bambini</span>
+                  <span class="optional-price gratis">Gratis</span>
+                </div>
+                <div class="d-flex align-items-center gap-1">
+                  <i class="bi bi-question-circle-fill label-help"></i>
+                  <div class="custom-select-wrap optional-select">
+                    <select class="form-select-custom" id="opt-seggiolino">
+                      <option>0</option><option>1</option><option>2</option>
+                    </select>
+                    <i class="bi bi-chevron-down select-icon"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="optional-row">
+                <div class="optional-info">
+                  <span class="optional-name">Alzatina per bambini</span>
+                  <span class="optional-price gratis">Gratis</span>
+                </div>
+                <div class="d-flex align-items-center gap-1">
+                  <i class="bi bi-question-circle-fill label-help"></i>
+                  <div class="custom-select-wrap optional-select">
+                    <select class="form-select-custom" id="opt-alzatina">
+                      <option>0</option><option>1</option><option>2</option>
+                    </select>
+                    <i class="bi bi-chevron-down select-icon"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="optional-row">
+                <div class="optional-info">
+                  <span class="optional-name">Passeggino</span>
+                  <span class="optional-price gratis">Gratis</span>
+                </div>
+                <div class="custom-select-wrap optional-select">
+                  <select class="form-select-custom" id="opt-passeggino">
+                    <option>0</option><option>1</option><option>2</option>
+                  </select>
+                  <i class="bi bi-chevron-down select-icon"></i>
+                </div>
+              </div>
+              <div class="optional-row">
+                <div class="optional-info">
+                  <span class="optional-name">Carrozzina pieghevole</span>
+                  <span class="optional-price gratis">Gratis</span>
+                </div>
+                <div class="custom-select-wrap optional-select">
+                  <select class="form-select-custom" id="opt-carrozzina">
+                    <option>0</option><option>1</option><option>2</option>
+                  </select>
+                  <i class="bi bi-chevron-down select-icon"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Colonna destra -->
+            <div class="col-12 col-md-6">
+              <div class="optional-row">
+                <div class="optional-info">
+                  <span class="optional-name">Sci o snowboard</span>
+                  <span class="optional-price">+10€</span>
+                </div>
+                <div class="custom-select-wrap optional-select">
+                  <select class="form-select-custom" id="opt-sci">
+                    <option>0</option><option>1</option><option>2</option>
+                  </select>
+                  <i class="bi bi-chevron-down select-icon"></i>
+                </div>
+              </div>
+              <div class="optional-row">
+                <div class="optional-info">
+                  <span class="optional-name">Strumenti musicali</span>
+                  <span class="optional-price">+10€</span>
+                </div>
+                <div class="custom-select-wrap optional-select">
+                  <select class="form-select-custom" id="opt-strumenti">
+                    <option>0</option><option>1</option><option>2</option>
+                  </select>
+                  <i class="bi bi-chevron-down select-icon"></i>
+                </div>
+              </div>
+              <div class="optional-row">
+                <div class="optional-info">
+                  <span class="optional-name">Attrezzatura da golf</span>
+                  <span class="optional-price">+10€</span>
+                </div>
+                <div class="custom-select-wrap optional-select">
+                  <select class="form-select-custom" id="opt-golf">
+                    <option>0</option><option>1</option><option>2</option>
+                  </select>
+                  <i class="bi bi-chevron-down select-icon"></i>
+                </div>
+              </div>
+              <div class="optional-row">
+                <div class="optional-info">
+                  <span class="optional-name">Animali domestici</span>
+                  <span class="optional-price">+10€</span>
+                </div>
+                <div class="d-flex align-items-center gap-1">
+                  <i class="bi bi-question-circle-fill label-help"></i>
+                  <div class="custom-select-wrap optional-select">
+                    <select class="form-select-custom" id="opt-animali">
+                      <option>0</option><option>1</option><option>2</option>
+                    </select>
+                    <i class="bi bi-chevron-down select-icon"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- fine optional -->
+
+          <!-- BOTTONE PROCEDI -->
+          <div class="mt-4 text-end">
+            <button class="btn-procedi" onclick="mostraRiepilogo()">Procedi</button>
+          </div>
+
+          <!-- BOX RIEPILOGO (nascosto di default) -->
+          <div id="box-riepilogo" class="riepilogo-box" style="display:none;">
+            <h4 class="riepilogo-title"><i class="bi bi-clipboard-check me-2"></i>Riepilogo prenotazione</h4>
+            <div id="riepilogo-content"></div>
+            <div class="text-end mt-3">
+              <button class="btn-acquista" onclick="acquista()">
+                <i class="bi bi-credit-card me-2"></i>Acquista
+              </button>
+            </div>
+          </div>
 
         </div>
-        <!-- fine form-configura -->
+        <!-- fine form-body -->
 
       </div>
+      <!-- fine form-configura -->
+
     </div>
   </section>
 
@@ -413,6 +381,7 @@
     }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Script.js"></script>
 </body>
 
 </html>
