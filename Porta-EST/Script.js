@@ -16,12 +16,14 @@ window.onload = function () {
 
   let datepicker=document.getElementById("datepicker");
   let oggi=new Date();
-  let minStr= formatDate(oggi);
-  let maxData= new Date(oggi);
-  maxData.setDate(oggi.getDate() + 4);
-  let maxStr= formatDate(maxData);
+
+  let minData= new Date(oggi);
+  minData.setDate(oggi.getDate() + 4);
+
+  let minStr= formatDate(minData);
+
   datepicker.min=minStr;
-  datepicker.max=maxStr;
+
 
   //Aggiorna opzioni valigie/bagagli quando cambia passeggeri
   document.getElementById("select-passeggeri").addEventListener("change", aggiornaBagagli);
